@@ -20,6 +20,8 @@ public class calculatorGUI {
         txtResult.setEditable(false);
 
           JButton btnResult = new JButton("RESULT");
+           JButton btnClear = new JButton("CLEAR");
+
 
 
         frame.add(lblNum1);
@@ -27,6 +29,7 @@ public class calculatorGUI {
         frame.add(lblNum2);
         frame.add(txtNum2);
         frame.add(btnResult);
+        frame.add(btnClear);
         frame.add(txtResult);
 
        
@@ -73,6 +76,14 @@ txtResult.setText(
 );
 
         });
+     
+
+btnClear.addActionListener(e -> {
+    txtNum1.setText("");
+    txtNum2.setText("");
+    txtResult.setText("Result: ");
+    
+});
 
  frame.setVisible(true);
 
