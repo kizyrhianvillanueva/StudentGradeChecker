@@ -14,7 +14,7 @@ public class calculatorGUI {
         JLabel lblNum1 = new JLabel("First Number: ");
         lblNum1.setBounds(20, 80, 150, 30);
         JTextField txtNum1 = new JTextField(20);
-        // txtNum1.setBounds(20, 110, 200, 35);
+        txtNum1.setBounds(20, 110, 200, 35);
 
         JLabel lblNum2 = new JLabel("Second Number: ");
         // lblNum2.setBounds(20, 170, 150, 30);
