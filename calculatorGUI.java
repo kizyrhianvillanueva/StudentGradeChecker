@@ -37,55 +37,55 @@ public class calculatorGUI {
         btnResult.addActionListener(e -> {
 
             String num1Text = txtNum1.getText().trim();
-String num2Text = txtNum2.getText().trim();
+        String num2Text = txtNum2.getText().trim();
 
-if (num1Text.isEmpty() || num2Text.isEmpty()) {
-    JOptionPane.showMessageDialog(frame,
+        if (num1Text.isEmpty() || num2Text.isEmpty()) {
+        JOptionPane.showMessageDialog(frame,
         "Please enter two numbers.");
-    return;
-}
+         return;
+        }
 
-double num1, num2;
+        double num1, num2;
 
-try {
-    num1 = Double.parseDouble(num1Text);
-    num2 = Double.parseDouble(num2Text);
-} catch (NumberFormatException ex) {
-    JOptionPane.showMessageDialog(frame,
+        try {
+        num1 = Double.parseDouble(num1Text);
+        num2 = Double.parseDouble(num2Text);
+        } catch (NumberFormatException ex) {
+        JOptionPane.showMessageDialog(frame,
         "Please enter valid numbers.");
-    return;
-}
+        return;
+        }
 
-double add = num1 + num2;
-double subtract = num1 - num2;
-double multiply = num1 * num2;
+        double add = num1 + num2;
+        double subtract = num1 - num2;
+        double multiply = num1 * num2;
 
-String divide;
+        String divide;
 
-if (num2 == 0) {
-    divide = "Cannot divide by zero";
-} else {
-    divide = String.valueOf(num1 / num2);
-}
+       if (num2 == 0) {
+       divide = "Cannot divide by zero";
+       } else {
+      divide = String.valueOf(num1 / num2);
+      }
 
-txtResult.setText(
-    "Addition: " + add +
-    "\nSubtraction: " + subtract +
-    "\nMultiplication: " + multiply +
-    "\nDivision: " + divide
-);
+      txtResult.setText(
+     "Addition: " + add +
+     "\nSubtraction: " + subtract +
+     "\nMultiplication: " + multiply +
+     "\nDivision: " + divide
+     );
 
         });
      
 
-btnClear.addActionListener(e -> {
+    btnClear.addActionListener(e -> {
     txtNum1.setText("");
     txtNum2.setText("");
     txtResult.setText("Result: ");
     
-});
+    });
 
- frame.setVisible(true);
+   frame.setVisible(true);
 
     
     }
