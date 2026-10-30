@@ -7,6 +7,7 @@ public class calculatorGUI {
 
         JFrame frame = new JFrame("calculatorGUI");
         frame.setSize(1000, 500);
+        frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new FlowLayout(FlowLayout.LEFT, 20, 10));
 
